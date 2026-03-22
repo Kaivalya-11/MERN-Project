@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   GLOBAL RESET (LOCKED)
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  letter-spacing: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: "Montserrat", system-ui, sans-serif;
+  color: #111;
+  background-color: #fff;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  image-rendering: auto;
+}
+
+/* ===============================
+   ROOT VARIABLES (DO NOT TOUCH)
+================================ */
+:root {
+  --container-width: 1200px;
+
+  --section-gap: 72px;
+  --section-gap-tight: 40px;
+  --section-inner-gap: 36px;
+
+  --card-gap-x: 24px;
+  --card-gap-y: 40px;
+
+  --muted-grey: #f6f6f6;
+  --border-grey: #e6e6e6;
+  --text-muted: #777;
+}
+
+/* ===============================
+   GLOBAL CONTAINER
+================================ */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    padding: 0 20px;
+  }
+}
+
+/* ===============================
+   SECTION RHYTHM (LOCKED)
+================================ */
+section {
+  margin-top: var(--section-gap);
+}
+
+.section-tight {
+  margin-top: var(--section-gap-tight);
+}
+
+section:first-of-type {
+  margin-top: 0;
+}
+
+/* ===============================
+   SECTION HEADINGS
+================================ */
+.section-title {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: var(--section-inner-gap);
+}
+
+.section-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ===============================
+   TABBED PRODUCT SECTION (FIXED)
+================================ */
+.tabbed-product-section {
+  margin-top: var(--section-gap);
+}
+
+.tabbed-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tabbed-header button {
+  background: none;
+  border: none;
+  margin: 0 20px;
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+.tabbed-header .active {
+  border-bottom: 1px solid #000;
+}
+
+.tabbed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--card-gap-y) var(--card-gap-x);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.product-thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.product-thumbs img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.product-thumbs img:hover {
+  border-color: #000;
+}
+
+.product-price {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* VIEW ALL BUTTON – LOCKED */
+.view-all-btn {
+  display: block;
+  margin: 56px auto 0;
+  padding: 14px 48px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.view-all-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===============================
+   WATCH & SHOP (LOCKED)
+================================ */
+.watch-and-shop {
+  margin-top: var(--section-gap-tight);
+  padding: 64px 0;
+  background: var(--muted-grey);
+  border-top: 1px solid var(--border-grey);
+}
+
+.watch-shop-title {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  margin-bottom: 50px;
+}
+
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.watch-tile {
+  height: 420px;
+  overflow: hidden;
+}
+
+.watch-tile img,
+.watch-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   BRAND STORY
+================================ */
+.brand-story {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.brand-story p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ===============================
+   SPOTTED ON
+================================ */
+.spotted-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+/* ===============================
+   CATEGORY SHOWCASE
+================================ */
+.category-showcase {
+  min-height: 720px;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+/* ===============================
+   CUSTOMER REVIEWS (GRID)
+================================ */
+.customer-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+/* ===============================
+   FOOTER (LOCKED)
+================================ */
+footer {
+  background: #111;
+  color: #bbb;
+  padding: 72px 0 32px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  font-size: 12px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+/* ===============================
+   RESPONSIVE (SAFE)
+================================ */
+@media (max-width: 1024px) {
+
+  .tabbed-grid,
+  .watch-grid,
+  .customer-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-story {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .tabbed-grid,
+  .watch-grid,
+  .customer-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}

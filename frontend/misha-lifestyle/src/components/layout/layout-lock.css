@@ -1,0 +1,235 @@
+/* =========================================================
+   GLOBAL LAYOUT LOCK — MAISHA BY ESHA
+   Purpose: Pixel-stable layout, spacing & sizing
+   Do NOT edit unless intentional design change
+   ========================================================= */
+
+/* ---------- GLOBAL BASE ---------- */
+:root {
+  --container-max: 1280px;
+  --section-gap: 80px;
+  --section-gap-sm: 56px;
+  --text-primary: #111;
+  --text-muted: #777;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* ---------- GLOBAL SECTION SPACING ---------- */
+section {
+  margin-bottom: var(--section-gap);
+}
+
+section.compact {
+  margin-bottom: var(--section-gap-sm);
+}
+
+/* ---------- HEADER & CATEGORY RAIL ---------- */
+.category-rail {
+  padding: 18px 0 26px;
+}
+
+.category-rail img {
+  height: 72px;
+  object-fit: contain;
+}
+
+.category-rail span {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+/* ---------- CAMPAIGN / HERO ---------- */
+.campaign-slider {
+  padding: 0 32px;
+}
+
+.campaign-grid {
+  gap: 12px;
+}
+
+.campaign-slider::before {
+  height: 92px;
+}
+
+.campaign-arrow {
+  bottom: -28px;
+}
+
+/* ---------- TABBED PRODUCT SECTION ---------- */
+.tabbed-product-section {
+  margin-top: 48px;
+}
+
+.tabbed-product-section .tabs {
+  margin-bottom: 32px;
+}
+
+.tabbed-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px 32px;
+}
+
+.product-card {
+  max-width: 260px;
+}
+
+.product-image {
+  height: 340px;
+  object-fit: cover;
+}
+
+.product-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* VIEW ALL BUTTON */
+.view-all-btn {
+  margin-top: 40px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 14px 34px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  transition: all 0.25s ease;
+}
+
+.view-all-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ---------- WATCH & SHOP ---------- */
+.watch-and-shop {
+  padding: 48px 0;
+  background: #f2f2f2;
+}
+
+.watch-and-shop h2 {
+  margin-bottom: 24px;
+}
+
+.watch-grid {
+  gap: 24px;
+}
+
+.watch-tile {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* ---------- BRAND STORY ---------- */
+.brand-story {
+  gap: 72px;
+}
+
+.brand-story p {
+  max-width: 480px;
+}
+
+.brand-story img,
+.brand-story video {
+  height: 420px;
+  object-fit: cover;
+}
+
+/* ---------- SPOTTED ON ---------- */
+.spotted-on {
+  margin-top: var(--section-gap);
+}
+
+.spotted-grid {
+  gap: 20px 16px;
+}
+
+.spotted-grid img {
+  height: 360px;
+  object-fit: cover;
+}
+
+.spotted-name {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* ---------- CATEGORY SHOWCASE ---------- */
+.category-tabs {
+  margin-bottom: 28px;
+}
+
+.category-card img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.category-rating {
+  margin-top: 4px;
+}
+
+/* ---------- CUSTOMER REVIEWS ---------- */
+.customer-reviews {
+  margin-top: var(--section-gap);
+}
+
+.customer-reviews-grid {
+  gap: 32px 24px;
+}
+
+.review-card {
+  padding: 20px;
+}
+
+.review-stars {
+  font-size: 12px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding-top: 64px;
+}
+
+.footer-columns {
+  gap: 56px;
+}
+
+.footer-socials {
+  gap: 14px;
+}
+
+.footer-bottom {
+  margin-top: 36px;
+  padding-top: 16px;
+}
+
+/* ---------- MOBILE SAFETY ---------- */
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 56px;
+  }
+
+  .product-image {
+    height: 300px;
+  }
+
+  .watch-tile {
+    height: 320px;
+  }
+}

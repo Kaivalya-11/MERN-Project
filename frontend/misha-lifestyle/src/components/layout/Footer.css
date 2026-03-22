@@ -1,0 +1,109 @@
+.footer {
+  background: #1c1c1c;
+  color: #d9d9d9;
+  font-size: 13px;
+}
+
+/* FEATURE STRIP */
+.footer-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.feature svg {
+  width: 26px;
+  height: 26px;
+  stroke: #000;
+  fill: none;
+  stroke-width: 1.2;
+  margin-bottom: 10px;
+}
+
+/* MAIN FOOTER */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.footer-main h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.footer-main ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-main li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-main li:hover {
+  color: #fff;
+}
+
+.footer-address p {
+  margin-bottom: 12px;
+}
+
+.footer-address a {
+  color: #d9d9d9;
+  text-decoration: none;
+}
+
+.footer-address a:hover {
+  color: #fff;
+}
+
+/* NEWSLETTER */
+.footer-main input {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-main button {
+  padding: 12px 24px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  gap: 18px;
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+  stroke: #d9d9d9;
+  fill: none;
+  cursor: pointer;
+}
+
+.socials svg:hover {
+  stroke: #fff;
+}
